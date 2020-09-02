@@ -7,33 +7,42 @@
 </head>
 <body>
     <label for="network-power">Enter Network Power For Desired Coin</label>
-    <input type="text" name="network-power-hash" id="network-power">
-    <select name="network-power-prefix" id="network-power">
+    <input type="number" step="any" id="network-power">
+    <select name="network-power-prefix" id="network-power-selector">
         <option value="ghs">GH/s</option>
-        <option value="ghs">TH/s</option>
-        <option value="ghs">PH/s</option>
+        <option value="ths">TH/s</option>
+        <option value="phs">PH/s</option>
+        <option selected value="ehs">EH/s</option>
     </select>
     <br>
     <label for="goal-power">Enter Your Goal Power</label>
     <input type="text" name="goal-power-hash" id="goal-power">
-    <select name="goal-power-prefix" id="goal-power">
+    <select name="goal-power-prefix" id="goal-power-selector">
         <option value="ghs">GH/s</option>
-        <option value="ghs">TH/s</option>
-        <option value="ghs">PH/s</option>
+        <option selected value="ths">TH/s</option>
+        <option value="phs">PH/s</option>
+        <option value="ehs">EH/s</option>
     </select>
     <br>
     <label for="block-reward">Enter Block Reward For Desired Coin</label>
     <input type="text" name="block-reward" id="block-reward">
-    <script src="js.js"></script>
+    <select name="block-type" id="block-type">
+        <option value="BTC">Bitcoin (BTC)</option>
+        <option value="DOGE">Doge</option>
+        <option value="ETH">Etherium (ETH)</option>
+    </select>
     <br>
     <button onclick="calculate()">Calculate</button>
     <br>
-    <span>Expected Reward: <span>N/A</span></span>
+    <span>Expected Reward: <span id="exp_reward"></span></span>
     <br>
-    <span>Daily Reward: <span>N/A</span></span>
+    <span>Daily Reward: <span id="daily"></span></span>
     <br>
-    <span>Weekly Reward: <span>N/A</span></span>
+    <span>Weekly Reward: <span id="weekly"></span></span>
     <br>
-    <span>Monthly Reward: <span>N/A</span></span>
+    <span>Monthly Reward: <span id="monthly"></span></span>
+
+
+    <script src="js.js"></script>
 </body>
 </html>
