@@ -75,7 +75,7 @@ function calculate() {
             break;
         default:
             var ethResult = (exp_reward * dailyEthBlocks).toFixed(4);
-            document.getElementById("daily").innerHTML = btcResult;
+            document.getElementById("daily").innerHTML = ethResult;
             document.getElementById("weekly").innerHTML = ethResult * 7;
             document.getElementById("monthly").innerHTML = ethResult * 30;
             break;
