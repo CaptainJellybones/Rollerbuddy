@@ -64,20 +64,20 @@ function calculate() {
         case 0:
             var btcResult = (exp_reward * dailyBtcBlocks).toFixed(4);
             document.getElementById("daily").innerHTML = btcResult;
-            document.getElementById("weekly").innerHTML = btcResult * 7;
-            document.getElementById("monthly").innerHTML = btcResult * 30;
+            document.getElementById("weekly").innerHTML = (btcResult * 7).toFixed(4);
+            document.getElementById("monthly").innerHTML = (btcResult * 30).toFixed(4);
             break;
         case 1:
             var dogeResult = (exp_reward * dailyDogeBlocks).toFixed(4);
             document.getElementById("daily").innerHTML = dogeResult;
-            document.getElementById("weekly").innerHTML = dogeResult * 7;
-            document.getElementById("monthly").innerHTML = dogeResult * 30;
+            document.getElementById("weekly").innerHTML = (dogeResult * 7).toFixed(4);
+            document.getElementById("monthly").innerHTML = (dogeResult * 30).toFixed(4);
             break;
         default:
             var ethResult = (exp_reward * dailyEthBlocks).toFixed(4);
             document.getElementById("daily").innerHTML = ethResult;
-            document.getElementById("weekly").innerHTML = ethResult * 7;
-            document.getElementById("monthly").innerHTML = ethResult * 30;
+            document.getElementById("weekly").innerHTML = (ethResult * 7).toFixed(4);
+            document.getElementById("monthly").innerHTML = (ethResult * 30).toFixed(4);
             break;
     }
 }
