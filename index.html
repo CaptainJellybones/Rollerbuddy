@@ -7,7 +7,7 @@
 </head>
 <body>
     <label for="network-power">Enter Network Power For Desired Coin</label>
-    <input type="number" step="any" id="network-power">
+    <input class="inputCalc" type="number" step="any" id="network-power">
     <select name="network-power-prefix" id="network-power-selector">
         <option value="ghs">GH/s</option>
         <option value="ths">TH/s</option>
@@ -16,7 +16,7 @@
     </select>
     <br>
     <label for="goal-power">Enter Your Goal Power</label>
-    <input type="text" name="goal-power-hash" id="goal-power">
+    <input class="inputCalc" type="text" name="goal-power-hash" id="goal-power">
     <select name="goal-power-prefix" id="goal-power-selector">
         <option value="ghs">GH/s</option>
         <option selected value="ths">TH/s</option>
@@ -25,14 +25,14 @@
     </select>
     <br>
     <label for="block-reward">Enter Block Reward For Desired Coin</label>
-    <input type="text" name="block-reward" id="block-reward">
+    <input class="inputCalc" type="text" name="block-reward" id="block-reward">
     <select name="block-type" id="block-type">
         <option value="BTC">Bitcoin (BTC)</option>
         <option value="DOGE">Doge</option>
         <option value="ETH">Etherium (ETH)</option>
     </select>
     <br>
-    <button onclick="calculate()">Calculate</button>
+    <button id="calcbtn" onclick="calculate()">Calculate</button>
     <br>
     <span>Expected Reward: <span id="exp_reward"></span></span>
     <br>

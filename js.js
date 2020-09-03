@@ -3,7 +3,7 @@ function calculate() {
     console.log("Calculate Begin");
     var netpower = parseFloat(document.getElementById("network-power").value);
     var goalpower = parseFloat(document.getElementById("goal-power").value);
-    var blockreward = parseInt(document.getElementById("block-reward").value);
+    var blockreward = parseFloat(document.getElementById("block-reward").value);
     switch (document.getElementById("network-power-selector").selectedIndex) {
         case 0:
             netpower *= 1000000000;
@@ -75,7 +75,7 @@ function calculate() {
             document.getElementById("monthly").innerHTML = (dogeResult * 30).toFixed(4) + " Doge";
             break;
         default:
-            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(4) + " Etherium";
+            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Etherium";
             var ethResult = (exp_reward * dailyEthBlocks).toFixed(4);
             document.getElementById("daily").innerHTML = ethResult + " Etherium";
             document.getElementById("weekly").innerHTML = (ethResult * 7).toFixed(4) + " Etherium";
