@@ -1,0 +1,15 @@
+body {
+    height: 100%;
+    position: relative;
+}
+
+footer {
+    bottom: 0;
+    text-align: center;
+    padding: auto;
+}
+
+.labeltext {
+    margin-left: 3%;
+}
+

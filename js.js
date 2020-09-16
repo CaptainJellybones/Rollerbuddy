@@ -1,5 +1,5 @@
 console.log("Hello World");
-function calculate() {
+function calculateGoalPower() {
     console.log("Calculate Begin");
     var netpower = parseFloat(document.getElementById("network-power").value);
     var goalpower = parseFloat(document.getElementById("goal-power").value);
@@ -83,4 +83,5 @@ function calculate() {
             break;
     }
 }
+
 
