@@ -3,6 +3,10 @@ body {
     position: relative;
 }
 
+label {
+    margin-bottom: 0;
+}
+
 footer {
     bottom: 0;
     text-align: center;
@@ -14,7 +18,7 @@ footer {
 }
 
 .spacing {
-    margin-bottom: 15px;
+    margin-top: 10px;
 }
 
 .edger {
