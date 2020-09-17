@@ -13,8 +13,12 @@ footer {
     margin-left: 3%;
 }
 
-.jumbotron {
+.spacing {
+    margin-bottom: 15px;
+}
 
+.edger {
+    margin-left: 15px;
 }
 
 #hamsterpirate {
@@ -24,4 +28,8 @@ footer {
 .titletext {
     padding-left: 6%;
     display: inline-block;
+}
+
+.inputlabel {
+    display: block;
 }
