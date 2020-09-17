@@ -1,0 +1,66 @@
+body {
+    height: 100%;
+    position: relative;
+    background-color: rgba(224,143,98,1);
+    font-family: 'Belleza', sans-serif;
+    color: white;
+    text-shadow: black 0px 0px 10px;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+footer {
+    bottom: 0;
+    text-align: center;
+    padding: auto;
+    z-index: 2;
+    padding: 5% 5% 0;
+}
+
+.labeltext {
+    margin-left: 3%;
+}
+
+.jumbotron {
+    background: rgb(163,86,56);
+    background: linear-gradient(180deg, rgba(163,86,56,1) 0%, rgba(224,143,98,1) 35%);
+    margin-bottom: 0;
+}
+
+.main-section {
+    background: rgb(224,143,98);
+    background: linear-gradient(180deg, rgba(224,143,98,1) 0%, rgba(224,143,98,11) 35%);
+    z-index: 2;
+}
+
+.spacing {
+    margin-top: 10px;
+}
+
+.edger {
+    padding-left: 15px;
+}
+
+#hamsterpirate {
+    padding-left: 6%;
+}
+
+#expreward {
+    display: inline-block;
+}
+
+.titletext {
+    padding-left: 6%;
+    display: inline-block;
+}
+
+.inputlabel {
+    display: block;
+}
+
+.img-absolute {
+    position: absolute;
+    display: inline-block;
+}
