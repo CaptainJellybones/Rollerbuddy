@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rollerbuddy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>Rollerbuddy</h1>
+            <p>Your personal Rollercoin calculator</p>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-2 labeltext">
+            <label for="network-power">Enter Network Power For Desired Coin</label>
+            <label for="goal-power">Enter Your Goal Power</label>
+            <label for="block-reward">Enter Block Reward For Desired Coin</label>
+        </div>
+        <div class="col-5">
+            <input class="inputCalc" type="number" step="any" id="network-power">
+            <select name="network-power-prefix" id="network-power-selector">
+                <option value="ghs">GH/s</option>
+                <option value="ths">TH/s</option>
+                <option value="phs">PH/s</option>
+                <option selected value="ehs">EH/s</option>
+            </select>
+            <br>
+
+            <input class="inputCalc" type="text" name="goal-power-hash" id="goal-power">
+            <select name="goal-power-prefix" id="goal-power-selector">
+                <option value="ghs">GH/s</option>
+                <option selected value="ths">TH/s</option>
+                <option value="phs">PH/s</option>
+                <option value="ehs">EH/s</option>
+            </select>
+            <br>
+            <input class="inputCalc" type="text" name="block-reward" id="block-reward">
+            <select name="block-type" id="block-type">
+                <option value="BTC">Bitcoin (BTC)</option>
+                <option value="DOGE">Doge</option>
+                <option value="ETH">Etherium (ETH)</option>
+            </select>
+            <br>
+            <button id="calcbtn" onclick="calculateGoalPower()">Calculate</button>
+        </div>
+        <!-- <div class="col-4"></div> -->
+        <div class="col-4 expreward">
+            <span>Expected Reward: <span id="exp_reward"></span></span>
+            <br>
+            <span>Daily Reward: <span id="daily"></span></span>
+            <br>
+            <span>Weekly Reward: <span id="weekly"></span></span>
+            <br>
+            <span>Monthly Reward: <span id="monthly"></span></span>
+        </div>
+    </div>
+
+    <footer class="page-footer font-small gray">
+        <div class="text-center">
+            <p>Rollerbuddy isn't endorsed by Rollercoin and does not reflect the views or opinions of anyone officially
+                involved in producing and managing Rollercoin and their service(s).</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="js.js"></script>
+</body>
+
+</html>
