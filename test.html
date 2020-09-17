@@ -25,44 +25,47 @@
         </div>
     </div>
 
-    <div class="edger">
-        <div class="inputlabel">
-            <label for="network-power">Enter Network Power For Desired Coin</label>
-            <br>
-            <input class="inputCalc" type="number" step="any" id="network-power" oninput="calculateGoalPower()">
-            <select name="network-power-prefix" id="network-power-selector" onchange="calculateGoalPower()">
-                <option value="ghs">GH/s</option>
-                <option value="ths">TH/s</option>
-                <option value="phs">PH/s</option>
-                <option selected value="ehs">EH/s</option>
-            </select>
-        </div>
-        <div class="inputlabel">
-            <label for="goal-power">Enter Your Desired Goal Power</label>
-            <br>
-            <input class="inputCalc" type="number" name="goal-power-hash" id="goal-power"
-                oninput="calculateGoalPower()">
-            <select name="goal-power-prefix" id="goal-power-selector" onchange="calculateGoalPower()">
-                <option value="ghs">GH/s</option>
-                <option selected value="ths">TH/s</option>
-                <option value="phs">PH/s</option>
-                <option value="ehs">EH/s</option>
-            </select>
-        </div>
-        <div class="inputlabel">
-            <label for="block-reward">Enter Block Reward For Desired Coin</label>
-            <br>
-            <input class="inputCalc" type="number" name="block-reward" id="block-reward" oninput="calculateGoalPower()">
-            <select name="block-type" id="block-type" onchange="calculateGoalPower()">
-                <option value="BTC">Bitcoin (BTC)</option>
-                <option value="DOGE">Doge</option>
-                <option value="ETH">Etherium (ETH)</option>
-            </select>
+    <div class="edger row no-gutters">
+        <div class="col-md-6">
+            <div class="inputlabel">
+                <label for="network-power">Enter Network Power For Desired Coin</label>
+                <br>
+                <input class="inputCalc" type="number" step="any" id="network-power" oninput="calculateGoalPower()">
+                <select name="network-power-prefix" id="network-power-selector" onchange="calculateGoalPower()">
+                    <option value="ghs">GH/s</option>
+                    <option value="ths">TH/s</option>
+                    <option value="phs">PH/s</option>
+                    <option selected value="ehs">EH/s</option>
+                </select>
+            </div>
+            <div class="inputlabel">
+                <label for="goal-power">Enter Your Desired Goal Power</label>
+                <br>
+                <input class="inputCalc" type="number" name="goal-power-hash" id="goal-power"
+                    oninput="calculateGoalPower()">
+                <select name="goal-power-prefix" id="goal-power-selector" onchange="calculateGoalPower()">
+                    <option value="ghs">GH/s</option>
+                    <option selected value="ths">TH/s</option>
+                    <option value="phs">PH/s</option>
+                    <option value="ehs">EH/s</option>
+                </select>
+            </div>
+            <div class="inputlabel">
+                <label for="block-reward">Enter Block Reward For Desired Coin</label>
+                <br>
+                <input class="inputCalc" type="number" name="block-reward" id="block-reward"
+                    oninput="calculateGoalPower()">
+                <select name="block-type" id="block-type" onchange="calculateGoalPower()">
+                    <option value="BTC">Bitcoin (BTC)</option>
+                    <option value="DOGE">Doge</option>
+                    <option value="ETH">Etherium (ETH)</option>
+                </select>
+            </div>
+            <br class="spacer">
+            <button id="calcbtn" class="spacing" onclick="calculateGoalPower()">Calculate</button>
         </div>
         <br class="spacer">
-        <button id="calcbtn" class="spacing" onclick="calculateGoalPower()">Calculate</button>
-        <br class="spacer">
-        <div class="spacing">
+        <div class="spacing col-md-6">
             <span>Expected Reward: <span id="exp_reward"></span></span>
             <br>
             <span>Daily Reward: <span id="daily"></span></span>
@@ -71,14 +74,14 @@
             <br>
             <span>Monthly Reward: <span id="monthly"></span></span>
         </div>
-    <footer class="page-footer font-small gray">
-        <div class="text-center">
-            <p>Rollerbuddy isn't endorsed by Rollercoin and does not reflect the views or opinions of anyone
-                officially
-                involved in producing and managing Rollercoin and their service(s).</p>
-        </div>
-    </footer>
-</div>
+        <footer class="page-footer font-small gray">
+            <div class="text-center">
+                <p>Rollerbuddy isn't endorsed by Rollercoin and does not reflect the views or opinions of anyone
+                    officially
+                    involved in producing and managing Rollercoin and their service(s).</p>
+            </div>
+        </footer>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
