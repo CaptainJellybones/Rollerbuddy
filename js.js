@@ -45,10 +45,10 @@ function calculateGoalPower() {
     
     console.log("exp. reward " + exp_reward.toFixed(4));
 
-    var btcBlockTimer = 328;
-    var dogeBlockTimer = 308;
-    var ethBlockTimer = 351;
-    var secFullDay = 86400;
+    const btcBlockTimer = 331;
+    const dogeBlockTimer = 304;
+    const ethBlockTimer = 341;
+    const secFullDay = 86400;
 
     const dailyBtcBlocks = secFullDay / btcBlockTimer;
     const dailyDogeBlocks = secFullDay / dogeBlockTimer;
