@@ -37,3 +37,36 @@ footer {
 .inputlabel {
     display: block;
 }
+
+/* <<<<<<<<<<<<<<<<<<< Media Query >>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: 767px) {
+    .edger {
+        margin: auto;
+        text-align: center;
+    }
+    .jumbotron {
+        padding: 1rem 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .titletext {
+        text-align: center;
+        margin: auto;
+    }
+
+    .img-fluid {
+        margin-left: 30%;
+    }
+
+    .inputlabel {
+        position: relative;
+        display: block;
+        text-align: left;
+    }
+
+    .spacerInput {
+        display: block;
+    }
+    
+}
