@@ -25,12 +25,11 @@ footer {
     margin-left: 15px;
 }
 
-#hamsterpirate {
+.header-margin {
     padding-left: 6%;
 }
 
 .titletext {
-    padding-left: 6%;
     display: inline-block;
 }
 
