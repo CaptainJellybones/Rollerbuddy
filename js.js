@@ -86,7 +86,6 @@ function calculateGoalPower() {
 
     switch (document.getElementById("block-type").selectedIndex) {
         case 0:
-            document.getElementById("block-reward") == 9000;
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(4) + " Satoshi";
             var btcResult = (exp_reward * dailyBtcBlocks).toFixed(4);
             document.getElementById("daily").innerHTML = btcResult + " Satoshi";
@@ -94,20 +93,25 @@ function calculateGoalPower() {
             document.getElementById("monthly").innerHTML = (btcResult * 30).toFixed(4) + " Satoshi";
             break;
         case 1:
-            document.getElementById("block-reward") == 240;
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(4) + " Doge";
             var dogeResult = (exp_reward * dailyDogeBlocks).toFixed(4);
             document.getElementById("daily").innerHTML = dogeResult + " Doge";
             document.getElementById("weekly").innerHTML = (dogeResult * 7).toFixed(4) + " Doge";
             document.getElementById("monthly").innerHTML = (dogeResult * 30).toFixed(4) + " Doge";
             break;
-        default:
-            document.getElementById("block-reward") == 0.0017;
+        case 2:
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Etherium";
             var ethResult = (exp_reward * dailyEthBlocks).toFixed(4);
             document.getElementById("daily").innerHTML = ethResult + " Etherium";
             document.getElementById("weekly").innerHTML = (ethResult * 7).toFixed(4) + " Etherium";
             document.getElementById("monthly").innerHTML = (ethResult * 30).toFixed(4) + " Etherium";
+            break;
+        default:
+            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Rollertoken";
+            var rltResult = (exp_reward * dailyEthBlocks).toFixed(4);
+            document.getElementById("daily").innerHTML = rltResult + " Rollertoken";
+            document.getElementById("weekly").innerHTML = (rltResult * 7).toFixed(4) + " Rollertoken";
+            document.getElementById("monthly").innerHTML = (rltResult * 30).toFixed(4) + " Rollertoken";
             break;
     }
 }
