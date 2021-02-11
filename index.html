@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="calculateGoalPower(), blockAmount()">
     <div class="jumbotron jumbotron-fluid">
         <div class="row no-gutters">
             <div class="col-lg-2 col-4">
@@ -58,10 +58,11 @@
                 <br class="spacerInput">
                 <input class="inputCalc inputBlock" type="number" name="block-reward" id="block-reward"
                     oninput="calculateGoalPower()">
-                <select name="block-type" id="block-type" onchange="calculateGoalPower()">
+                <select name="block-type" id="block-type" onchange="blockAmount(), calculateGoalPower()">
                     <option value="BTC">Bitcoin (BTC)</option>
                     <option value="DOGE">Doge (DOGE)</option>
                     <option value="ETH">Etherium (ETH)</option>
+                    <option value="RLT">Roller Token (RLT)</option>
                 </select>
             </div>
             <button id="calcbtn" style="margin-top: 10px;" class="spacing" onclick="calculateGoalPower()">Calculate</button>

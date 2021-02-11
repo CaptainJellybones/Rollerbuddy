@@ -1,9 +1,34 @@
 console.log("Hello World");
+
+function blockAmount() {
+    // Returns pre-set block rewards based on block selected
+    // Update if updated on rollercoin
+    switch (document.getElementById("block-type").selectedIndex) {
+        case 0:
+            var blockreward = 9000;
+            document.getElementById("block-reward").value = 9000;
+            break;
+        case 1:
+            var blockreward = 240; 
+            document.getElementById("block-reward").value = 240;
+            break;
+        case 2:
+            var blockreward = 0.0017;
+            document.getElementById("block-reward").value = 0.0017;
+            break;
+        default:
+            var blockreward = 5;
+            document.getElementById("block-reward").value = 5;
+            break;
+        }
+}
+
 function calculateGoalPower() {
     console.log("Calculate Begin");
     var netpower = parseFloat(document.getElementById("network-power").value);
     var goalpower = parseFloat(document.getElementById("goal-power").value);
     var blockreward = parseFloat(document.getElementById("block-reward").value);
+
     switch (document.getElementById("network-power-selector").selectedIndex) {
         case 0:
             netpower *= 1000000000;
@@ -45,9 +70,9 @@ function calculateGoalPower() {
     
     console.log("exp. reward " + exp_reward.toFixed(4));
 
-    const btcBlockTimer = 302;
+    const btcBlockTimer = 301;
     const dogeBlockTimer = 301;
-    const ethBlockTimer = 308;
+    const ethBlockTimer = 301;
     const secFullDay = 86400;
 
     const dailyBtcBlocks = secFullDay / btcBlockTimer;
@@ -61,6 +86,7 @@ function calculateGoalPower() {
 
     switch (document.getElementById("block-type").selectedIndex) {
         case 0:
+            document.getElementById("block-reward") == 9000;
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(4) + " Satoshi";
             var btcResult = (exp_reward * dailyBtcBlocks).toFixed(4);
             document.getElementById("daily").innerHTML = btcResult + " Satoshi";
@@ -68,6 +94,7 @@ function calculateGoalPower() {
             document.getElementById("monthly").innerHTML = (btcResult * 30).toFixed(4) + " Satoshi";
             break;
         case 1:
+            document.getElementById("block-reward") == 240;
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(4) + " Doge";
             var dogeResult = (exp_reward * dailyDogeBlocks).toFixed(4);
             document.getElementById("daily").innerHTML = dogeResult + " Doge";
@@ -75,6 +102,7 @@ function calculateGoalPower() {
             document.getElementById("monthly").innerHTML = (dogeResult * 30).toFixed(4) + " Doge";
             break;
         default:
+            document.getElementById("block-reward") == 0.0017;
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Etherium";
             var ethResult = (exp_reward * dailyEthBlocks).toFixed(4);
             document.getElementById("daily").innerHTML = ethResult + " Etherium";
