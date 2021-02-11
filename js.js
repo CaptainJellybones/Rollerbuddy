@@ -74,12 +74,19 @@ function calculateGoalPower() {
             document.getElementById("weekly").innerHTML = (dogeResult * 7).toFixed(4) + " Doge";
             document.getElementById("monthly").innerHTML = (dogeResult * 30).toFixed(4) + " Doge";
             break;
+	case 2:
+            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(4) + " Etherium";
+            var ethResult = (exp_reward * dailyDogeBlocks).toFixed(4);
+            document.getElementById("daily").innerHTML = dogeResult + " Doge";
+            document.getElementById("weekly").innerHTML = (dogeResult * 7).toFixed(4) + " Etherium";
+            document.getElementById("monthly").innerHTML = (dogeResult * 30).toFixed(4) + " Etherium";
+            break;
         default:
-            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Etherium";
+            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Rollercoin";
             var ethResult = (exp_reward * dailyEthBlocks).toFixed(4);
-            document.getElementById("daily").innerHTML = ethResult + " Etherium";
-            document.getElementById("weekly").innerHTML = (ethResult * 7).toFixed(4) + " Etherium";
-            document.getElementById("monthly").innerHTML = (ethResult * 30).toFixed(4) + " Etherium";
+            document.getElementById("daily").innerHTML = ethResult + " Rollercoin";
+            document.getElementById("weekly").innerHTML = (ethResult * 7).toFixed(4) + " Rollercoin";
+            document.getElementById("monthly").innerHTML = (ethResult * 30).toFixed(4) + " Rollercoin";
             break;
     }
 }
