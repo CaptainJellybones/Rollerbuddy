@@ -27,6 +27,22 @@ footer {
     background: rgb(163,86,56);
     background: linear-gradient(180deg, rgba(163,86,56,1) 0%, rgba(224,143,98,1) 35%);
     margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
+.hashinputdiv {
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.hashinputdiv, label {
+    margin-top: 7px;
+}
+
+.fa-question-circle {
+    margin-left: 4px;
+    position: absolute;
+    color: rgb(174, 209, 255);
 }
 
 .main-section {
