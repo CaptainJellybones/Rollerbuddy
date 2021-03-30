@@ -23,6 +23,18 @@ function blockAmount() {
         }
 }
 
+var showimg = false;
+function showHashpowerHelp() {
+    if (showimg == false) {
+        document.querySelector("body > div.row.no-gutters.hashinput > div > div:nth-child(1) > img").style.display = "inline-block";
+        showimg = true;
+    } else {
+        document.querySelector("body > div.row.no-gutters.hashinput > div > div:nth-child(1) > img").style.display = "none";
+        showimg = false;
+    }
+    
+}
+
 function calculateGoalPower() {
     console.log("Calculate Begin");
     var netpower = parseFloat(document.getElementById("network-power").value);
