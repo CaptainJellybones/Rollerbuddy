@@ -23,16 +23,13 @@ function blockAmount() {
         }
 }
 
-var showimg = false;
 function showHashpowerHelp() {
-    if (showimg == false) {
-        document.querySelector("body > div.row.no-gutters.hashinput > div > div:nth-child(1) > img").style.display = "inline-block";
-        showimg = true;
+    var x = document.querySelector("body > div.row.no-gutters.hashinput > div > div:nth-child(1) > img");
+    if (x.classList.contains("hide")) {
+      x.classList.remove("hide");
     } else {
-        document.querySelector("body > div.row.no-gutters.hashinput > div > div:nth-child(1) > img").style.display = "none";
-        showimg = false;
+      x.classList.add("hide");
     }
-    
 }
 
 function calculateGoalPower() {

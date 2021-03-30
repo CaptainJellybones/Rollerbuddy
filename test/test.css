@@ -30,9 +30,6 @@ footer {
     margin-left: 3%;
 }
 
-
-
-
 .hashinputdiv {
     padding-bottom: 10px;
     position: relative;
@@ -55,7 +52,15 @@ footer {
     position: absolute;
     margin-left: 110%;
     margin-top: -90%;
-    display: none;
+    display: inline-block;
+
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+
+.hashpowerHelpIMG.hide {
+    opacity: 0;
+    transition: opacity 0.5s linear;
 }
 
 .fa-question-circle {
