@@ -55,7 +55,7 @@ footer {
     margin-left: 110%;
     margin-top: -90%;
     display: inline-block;
-
+    z-index: 100;
     opacity: 1;
     transition: opacity 0.5s linear;
 }
