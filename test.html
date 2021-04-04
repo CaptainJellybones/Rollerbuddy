@@ -29,8 +29,9 @@
     </div>
     <div class="row no-gutters hashinput">
         <div class="hashinputdiv">
-            <div>
-                <img class="hashpowerHelpIMG hide" src="./img/hashpowerHelpIMG.png" alt="Image showing where to find user HashPower">
+            <div id="helper-image">
+                <img class="hashpowerHelpIMG hide" src="./img/hashpowerHelpIMG.png"
+                    alt="Image showing where to find user HashPower">
             </div>
             <div>
                 <label for="hashpower">Enter your Hashpower!</label>
@@ -45,15 +46,57 @@
                     <option selected value="ehs">EH/s</option>
                 </select>
             </div>
-            
-            
         </div>
-        
     </div>
-        <div class="edger row no-gutters main-section">
+
+    <div class="row justify-content-center no-gutters netpowerinput">
+        <div class="col-md-2 netpowerbtc">
+            <div class="netpowerlabel">
+                <label for="btcnetpower">Bitcoin Network Power!</label>
+            </div>
+            <div class="netpowerinput">
+                <input placeholder="4.250" type="number" step="any" id="btcnetpower" oninput="calculateGoalPower()">
+            </div>
+        </div>
+
+        <div class="col-md-2 netpowerdoge">
+            <div class="netpowerlabel">
+                <label for="dogenetpower">DOGE Network Power!</label>
+            </div>
+            <div class="netpowerinput">
+                <input placeholder="4.250" type="number" step="any" id="dogenetpower" oninput="calculateGoalPower()">
+            </div>
+        </div>
+
+        <div class="col-md-2 netpowereth">
+            <div class="netpowerlabel">
+                <label for="ethnetpower">Ethereum Network Power!</label>
+            </div>
+            <div class="netpowerinput">
+                <input placeholder="4.250" type="number" step="any" id="ethnetpower" oninput="calculateGoalPower()">
+            </div>
+        </div>
+
+        <div class="col-md-2 netpowerrlt">
+            <div class="netpowerlabel">
+                <label for="rltnetpower">RollerToken Network Power!</label></div>
+            <div class="netpowerinput">
+                <input placeholder="4.250" type="number" step="any" id="rltnetpower" oninput="calculateGoalPower()"></div>
+        </div>
+
+    </div>
+
+    <!--<div>
+        <div class="col-md-6 no-gutters blockinput">
+            <input placeholder="4.250" type="number" step="any" id="x" oninput="calculateGoalPower()">
+            <input placeholder="4.250" type="number" step="any" id="x" oninput="calculateGoalPower()">
+            <input placeholder="4.250" type="number" step="any" id="x" oninput="calculateGoalPower()">
+            <input placeholder="4.250" type="number" step="any" id="x" oninput="calculateGoalPower()">
+        </div>
+    </div> -->
 
 
-            <!-- 
+    <!-- <div class="edger row no-gutters main-section">
                 <div class="col-md-1"></div>
             <div class="col-md-5">
                 <div class="inputlabel">
@@ -105,16 +148,20 @@
             </div>
             <div class="col-md-1"></div>
 
-        -->
+        
+    </div>-->
+
+    <footer class="page-footer spacing font-small gray">
+        <div class="text-center">
+            <p>Rollerbuddy isn't endorsed by Rollercoin and does not reflect the views or opinions of anyone
+                officially
+                involved in producing and managing Rollercoin and their service(s).</p>
         </div>
-        <footer class="page-footer spacing font-small gray">
-            <div class="text-center">
-                <p>Rollerbuddy isn't endorsed by Rollercoin and does not reflect the views or opinions of anyone
-                    officially
-                    involved in producing and managing Rollercoin and their service(s).</p>
-            </div>
-            
-        </footer>
+        <div class="supportMe">
+            Support me
+        </div>
+
+    </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>

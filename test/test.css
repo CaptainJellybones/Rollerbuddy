@@ -29,7 +29,9 @@ footer {
 .labeltext {
     margin-left: 3%;
 }
-
+.hashinput {
+    margin-bottom: 35px;
+}
 .hashinputdiv {
     padding-bottom: 10px;
     position: relative;
@@ -67,6 +69,14 @@ footer {
     margin-left: 4px;
     position: absolute;
     color: rgb(174, 209, 255);
+}
+
+.netpowerinput, .col-md-2 {
+    padding-right: 0;
+}
+
+.netpowerrlt {
+    padding-left: 0;
 }
 
 .main-section {
