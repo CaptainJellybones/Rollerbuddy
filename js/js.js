@@ -5,19 +5,19 @@ function blockAmount() {
     // Update if updated on rollercoin
     switch (document.getElementById("block-type").selectedIndex) {
         case 0:
-            var blockreward = 9000;
+            var blockreward = 30000;
             document.getElementById("block-reward").value = 9000;
             break;
         case 1:
-            var blockreward = 240; 
+            var blockreward = 20; 
             document.getElementById("block-reward").value = 240;
             break;
         case 2:
-            var blockreward = 0.0017;
+            var blockreward = 0.005;
             document.getElementById("block-reward").value = 0.0017;
             break;
         default:
-            var blockreward = 5;
+            var blockreward = 30;
             document.getElementById("block-reward").value = 5;
             break;
         }
@@ -79,15 +79,19 @@ function calculateGoalPower() {
     
     console.log("exp. reward " + exp_reward.toFixed(4));
 
-    const btcBlockTimer = 301;
-    const dogeBlockTimer = 900;
+    /* const btcBlockTimer = 600;
+    const dogeBlockTimer = 600;
     console.log(dogeBlockTimer + "seconds doge")
-    const ethBlockTimer = 301;
+    const ethBlockTimer = 600; */
+
+    //All timers are now the same 2021-04-19
+    const BlockTimer = 600;
     const secFullDay = 86400;
 
-    const dailyBtcBlocks = secFullDay / btcBlockTimer;
-    const dailyDogeBlocks = secFullDay / dogeBlockTimer;
-    const dailyEthBlocks = secFullDay / ethBlockTimer;
+    const dailyBtcBlocks = secFullDay / BlockTimer;
+    const dailyDogeBlocks = secFullDay / BlockTimer;
+    const dailyEthBlocks = secFullDay / BlockTimer;
+    console.log(dailyBtcBlocks + ", " + dailyDogeBlocks + ", " + dailyEthBlocks)
     
     console.log("DailyBTC "+dailyBtcBlocks);
     console.log("DailyDOGE "+dailyDogeBlocks);
