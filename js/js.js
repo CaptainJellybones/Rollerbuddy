@@ -6,19 +6,19 @@ function blockAmount() {
     switch (document.getElementById("block-type").selectedIndex) {
         case 0:
             var blockreward = 30000;
-            document.getElementById("block-reward").value = 9000;
+            document.getElementById("block-reward").value = 30000;
             break;
         case 1:
             var blockreward = 20; 
-            document.getElementById("block-reward").value = 240;
+            document.getElementById("block-reward").value = 20;
             break;
         case 2:
             var blockreward = 0.005;
-            document.getElementById("block-reward").value = 0.0017;
+            document.getElementById("block-reward").value = 0.005;
             break;
         default:
             var blockreward = 30;
-            document.getElementById("block-reward").value = 5;
+            document.getElementById("block-reward").value = 30;
             break;
         }
 }
