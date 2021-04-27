@@ -39,17 +39,17 @@
                 <i class="far fa-question-circle" onclick="showHashpowerHelp()"></i>
             </div>
             <div>
-                <input placeholder="4.250" type="number" step="any" id="hashpower" oninput="calculateGoalPower()">
-                <select name="network-power-prefix" id="network-power-selector" onchange="calculateGoalPower()">
+                <input placeholder="4.250" type="number" step="any" id="playerPowerInput" oninput="calculateGoalPower()">
+                <select name="network-power-prefix" id="playerPowerSelect" onchange="calculateGoalPower()">
                     <option value="ghs">GH/s</option>
-                    <option value="ths">TH/s</option>
+                    <option selected value="ths">TH/s</option>
                     <option value="phs">PH/s</option>
-                    <option selected value="ehs">EH/s</option>
+                    <option value="ehs">EH/s</option>
                 </select>
             </div>
         </div>
     </div>
-
+    <!--network power inputs -->
     <div class="row justify-content-center no-gutters netpowerinput">
         <div class="col-md-2 netpowerbtc">
             <div class="netpowerlabel">
@@ -57,6 +57,12 @@
             </div>
             <div class="netpowerinput">
                 <input placeholder="4.250" type="number" step="any" id="btcnetpower" oninput="calculateGoalPower()">
+                <select id="BTCSelect">
+                    <option value="GHS">GH/s</option>
+                    <option value="THS">TH/s</option>
+                    <option value="PHS">PH/s</option>
+                    <option value="EHS">EH/s</option>
+                </select>
             </div>
         </div>
 
@@ -66,6 +72,63 @@
             </div>
             <div class="netpowerinput">
                 <input placeholder="4.250" type="number" step="any" id="dogenetpower" oninput="calculateGoalPower()">
+                <select id="DOGESelect">
+                    <option value="GHS">GH/s</option>
+                    <option value="THS">TH/s</option>
+                    <option value="PHS">PH/s</option>
+                    <option value="EHS">EH/s</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-2 netpowereth">
+            <div class="netpowerlabel">
+                <label for="ethnetpower">Ethereum Network Power!</label>
+            </div>
+            <div class="netpowerinput">
+                <input placeholder="4.250" type="number" step="any" id="ethnetpower" oninput="calculateGoalPower()">
+                <select id="ETHSelect">
+                    <option value="GHS">GH/s</option>
+                    <option value="THS">TH/s</option>
+                    <option value="PHS">PH/s</option>
+                    <option value="EHS">EH/s</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-2 netpowerrlt">
+            <div class="netpowerlabel">
+                <label for="rltnetpower">RollerToken Network Power!</label></div>
+            <div class="netpowerinput">
+                <input placeholder="4.250" type="number" step="any" id="rltnetpower" oninput="calculateGoalPower()">
+                <select id="RLTSelect">
+                    <option value="GHS">GH/s</option>
+                    <option value="THS">TH/s</option>
+                    <option value="PHS">PH/s</option>
+                    <option value="EHS">EH/s</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Block reward inputs-->
+    <div class="row justify-content-center no-gutters blockInput">
+        <div class="col-md-2 blockBTC">
+            <div class="blockBTCLabel">
+                <label for="bNetPow">Bitcoin Block Reward!</label>
+            </div>
+            <div class="blockinput">
+                <input value="30000" type="number" step="any" id="bNetPow" oninput="calculateGoalPower()"> SAT
+            </div>
+        </div>
+
+        <div class="col-md-2 netpowerdoge">
+            <div class="netpowerlabel">
+                <label for="dogenetpower">DOGE Network Power!</label>
+            </div>
+            <div class="netpowerinput">
+                <input placeholder="4.250" type="number" step="any" id="dogenetpower" oninput="calculateGoalPower()"> 
             </div>
         </div>
 
@@ -153,8 +216,8 @@
         
     </div>-->
 
-    <footer class="page-footer spacing font-small gray">
-        <div class="text-center animate__animated animate__backInRight">
+    <footer class="page-footer spacing font-small gray  animate__animated animate__backInRight">
+        <div class="text-center">
             <p>Rollerbuddy isn't endorsed by Rollercoin and does not reflect the views or opinions of anyone
                 officially
                 involved in producing and managing Rollercoin and their service(s).</p>
