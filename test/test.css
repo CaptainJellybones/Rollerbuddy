@@ -114,3 +114,13 @@ footer {
     position: absolute;
     display: inline-block;
 }
+
+.supportMe {
+    display: inline-block;
+}
+
+/** Technical re-usable style **/ 
+
+.pointer {
+    cursor: pointer;
+}
