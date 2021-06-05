@@ -32,6 +32,16 @@ function showHashpowerHelp() {
     }
 }
 
+function supportMeToggle() {
+    var x = document.querySelector("body > div.supportMe.hide");
+    if (x.classList.contains("hide")) {
+      x.classList.remove("hide");
+      x.classList.add("animate__animated", "animate__bounceOutLeft");
+    } else {
+      x.classList.add("hide");
+    }
+}
+
 function calculateGoalPower() {
     console.log("Calculate Begin");
     var netpower = parseFloat(document.getElementById("network-power").value);

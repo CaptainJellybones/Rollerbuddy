@@ -36,7 +36,7 @@
             </div>
             <div>
                 <label for="hashpower">Enter your Hashpower!</label>
-                <i class="far fa-question-circle" onclick="showHashpowerHelp()"></i>
+                <i class="far fa-question-circle pointer" onclick="showHashpowerHelp()"></i>
             </div>
             <div>
                 <input placeholder="4.250" type="number" step="any" id="playerPowerInput" oninput="calculateGoalPower()">
@@ -216,13 +216,20 @@
         
     </div>-->
 
+    <!--Sidenav for the support me page
+    https://www.w3schools.com/howto/howto_js_sidenav.asp
+-->
+<div class="supportMe hide">
+    <h1>Hello World!</h1>
+</div>
+
     <footer class="page-footer spacing font-small gray">
         <div class="text-center">
             <p>Rollerbuddy isn't endorsed by Rollercoin and does not reflect the views or opinions of anyone
                 officially
                 involved in producing and managing Rollercoin and their service(s).</p>
         </div>
-        <div class="supportMe pointer">
+        <div class="inline-block pointer" onclick="supportMeToggle()">
             Support me
         </div>
         <!--<iframe class="animate__animated animate__backInRight" src="https://discord.com/widget?id=671082567117570051&theme=dark" width="350" height="500"

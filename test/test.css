@@ -26,6 +26,12 @@ footer {
     padding: 5% 5% 0;
 }
 
+/** Support me Navframe**/
+
+.supportMe {
+    
+}
+
 .labeltext {
     margin-left: 3%;
 }
@@ -46,10 +52,6 @@ footer {
     height: 30px;
 }
 
-.fa-question-circle {
-    cursor: pointer;
-}
-
 .hashpowerHelpIMG {
     position: absolute;
     margin-left: 110%;
@@ -60,7 +62,7 @@ footer {
     transition: opacity 0.5s linear;
 }
 
-.hashpowerHelpIMG.hide {
+.hide {
     opacity: 0;
     transition: opacity 0.5s linear;
 }
@@ -97,30 +99,16 @@ footer {
     padding-left: 6%;
 }
 
-#expreward {
-    display: inline-block;
-}
-
-.titletext {
-    padding-left: 6%;
-    display: inline-block;
-}
-
 .inputlabel {
     display: block;
-}
-
-.img-absolute {
-    position: absolute;
-    display: inline-block;
-}
-
-.supportMe {
-    display: inline-block;
 }
 
 /** Technical re-usable style **/ 
 
 .pointer {
     cursor: pointer;
+}
+
+.inline-block {
+    display: inline-block;
 }
