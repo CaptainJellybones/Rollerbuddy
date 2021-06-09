@@ -33,12 +33,14 @@ function showHashpowerHelp() {
 }
 
 function supportMeToggle() {
-    var x = document.querySelector("body > div.supportMe.hide");
+    var x = document.querySelector("body > div.supportMe");
     if (x.classList.contains("hide")) {
       x.classList.remove("hide");
-      x.classList.add("animate__animated", "animate__bounceOutLeft");
+      console.log("revealed SupportMe")
+     // x.classList.add("animate__animated", "animate__bounceOutLeft"); 
     } else {
       x.classList.add("hide");
+      console.log("Hide SupportMe")
     }
 }
 

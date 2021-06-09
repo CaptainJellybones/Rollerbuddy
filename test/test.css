@@ -67,6 +67,10 @@ footer {
     transition: opacity 0.5s linear;
 }
 
+.hidden {
+    opacity: 0;
+}
+
 .fa-question-circle {
     margin-left: 4px;
     position: absolute;
