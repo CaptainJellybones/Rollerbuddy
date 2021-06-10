@@ -29,7 +29,7 @@ footer {
 /** Support me Navframe**/
 
 .supportMe {
-    
+    transition: 0.5s;
 }
 
 .labeltext {

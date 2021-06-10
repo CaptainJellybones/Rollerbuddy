@@ -9,7 +9,7 @@ function blockAmount() {
             document.getElementById("block-reward").value = 30000;
             break;
         case 1:
-            var blockreward = 20; 
+            var blockreward = 20;
             document.getElementById("block-reward").value = 20;
             break;
         case 2:
@@ -20,27 +20,28 @@ function blockAmount() {
             var blockreward = 30;
             document.getElementById("block-reward").value = 30;
             break;
-        }
+    }
 }
 
 function showHashpowerHelp() {
     var x = document.querySelector("body > div.row.no-gutters.hashinput > div > div:nth-child(1) > img");
     if (x.classList.contains("hide")) {
-      x.classList.remove("hide");
+        x.classList.remove("hide");
     } else {
-      x.classList.add("hide");
+        x.classList.add("hide");
     }
 }
 
 function supportMeToggle() {
     var x = document.querySelector("body > div.supportMe");
-    if (x.classList.contains("hide")) {
-      x.classList.remove("hide");
-      console.log("revealed SupportMe")
-     // x.classList.add("animate__animated", "animate__bounceOutLeft"); 
+    if (x.classList.contains("hidden")) {
+        x.classList.add("animate__animate", "animate__fadeInLeft");
+        x.classList.remove("hidden");
+        console.log("revealed SupportMe")
+        // x.classList.add("animate__animated", "animate__bounceOutLeft"); 
     } else {
-      x.classList.add("hide");
-      console.log("Hide SupportMe")
+        x.classList.add("hidden");
+        console.log("Hide SupportMe")
     }
 }
 
@@ -86,9 +87,9 @@ function calculateGoalPower() {
             console.log("goalpwer after ehs conversion: " + goalpower);
             break;
     }
-    console.log("Block: "+blockreward);
+    console.log("Block: " + blockreward);
     var exp_reward = blockreward * (goalpower / netpower);
-    
+
     console.log("exp. reward " + exp_reward.toFixed(4));
 
     /* const btcBlockTimer = 600;
@@ -104,10 +105,10 @@ function calculateGoalPower() {
     const dailyDogeBlocks = secFullDay / BlockTimer;
     const dailyEthBlocks = secFullDay / BlockTimer;
     console.log(dailyBtcBlocks + ", " + dailyDogeBlocks + ", " + dailyEthBlocks)
-    
-    console.log("DailyBTC "+dailyBtcBlocks);
-    console.log("DailyDOGE "+dailyDogeBlocks);
-    console.log("DailyETH "+dailyEthBlocks);
+
+    console.log("DailyBTC " + dailyBtcBlocks);
+    console.log("DailyDOGE " + dailyDogeBlocks);
+    console.log("DailyETH " + dailyEthBlocks);
     console.log(exp_reward);
 
     switch (document.getElementById("block-type").selectedIndex) {
@@ -141,5 +142,3 @@ function calculateGoalPower() {
             break;
     }
 }
-
-
