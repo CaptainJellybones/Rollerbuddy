@@ -142,3 +142,6 @@ function calculateGoalPower() {
             break;
     }
 }
+
+// Arc.io Div appender
+

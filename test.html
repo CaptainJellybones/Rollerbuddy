@@ -116,10 +116,10 @@
     <div class="row justify-content-center no-gutters blockInput">
         <div class="col-md-2 blockBTC">
             <div class="blockBTCLabel">
-                <label for="bNetPow">Bitcoin Block Reward!</label>
+                <label for="btcblockreward">Bitcoin Block Reward!</label>
             </div>
             <div class="blockInput">
-                <input value="30000" type="number" step="any" id="bNetPow" oninput="calculateGoalPower()"> SAT
+                <input placeholder="30000" type="number" step="any" id="btcblockreward" oninput="calculateGoalPower()"> SAT
             </div>
         </div>
 
@@ -128,7 +128,7 @@
                 <label for="dogeblockreward">DOGE Block Reward!</label>
             </div>
             <div class="blockInput">
-                <input placeholder="4.250" type="number" step="any" id="dogeblockreward" oninput="calculateGoalPower()"> 
+                <input placeholder="20" type="number" step="any" id="dogeblockreward" oninput="calculateGoalPower()"> 
             </div>
         </div>
 
@@ -137,15 +137,15 @@
                 <label for="ethblockreward">Ethereum Block Reward!</label>
             </div>
             <div class="blockInput">
-                <input placeholder="4.250" type="number" step="any" id="ethblockreward" oninput="calculateGoalPower()">
+                <input placeholder="0.005" type="number" step="any" id="ethblockreward" oninput="calculateGoalPower()">
             </div>
         </div>
 
-        <div class="col-md-2 netpowerrlt">
-            <div class="netpowerlabel">
-                <label for="rltnetpower">RollerToken Network Power!</label></div>
-            <div class="netpowerinput">
-                <input placeholder="4.250" type="number" step="any" id="rltnetpower" oninput="calculateGoalPower()">
+        <div class="col-md-2 blockRLT">
+            <div class="blockRLTLabel">
+                <label for="rtlblockreward">RollerToken Block Reward!</label></div>
+            <div class="blockInput">
+                <input placeholder="30" type="number" step="any" id="rtlblockreward" oninput="calculateGoalPower()">
             </div>
         </div>
 
@@ -246,7 +246,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    <script src="./js/js.js"></script>
+    <script src="./test/test.js"></script>
 </body>
 
 </html>
