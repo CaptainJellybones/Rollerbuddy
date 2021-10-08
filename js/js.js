@@ -5,18 +5,27 @@ function blockAmount() {
     // Update if updated on rollercoin
     switch (document.getElementById("block-type").selectedIndex) {
         case 0:
+            //bitcoin
             var blockreward = 30000;
             document.getElementById("block-reward").value = 30000;
             break;
         case 1:
+            //Doge
             var blockreward = 20;
             document.getElementById("block-reward").value = 20;
             break;
         case 2:
+            //eth
             var blockreward = 0.005;
             document.getElementById("block-reward").value = 0.005;
             break;
+        case 3:
+            //bnb
+            var blockreward = 0.012;
+            document.getElementById("block-reward").value = 0.012;
+            break;
         default:
+            //RLT
             var blockreward = 30;
             document.getElementById("block-reward").value = 30;
             break;
@@ -104,6 +113,7 @@ function calculateGoalPower() {
     const dailyBtcBlocks = secFullDay / BlockTimer;
     const dailyDogeBlocks = secFullDay / BlockTimer;
     const dailyEthBlocks = secFullDay / BlockTimer;
+    const dailyBnbBlocks = secFullDay / BlockTimer;
     console.log(dailyBtcBlocks + ", " + dailyDogeBlocks + ", " + dailyEthBlocks)
 
     console.log("DailyBTC " + dailyBtcBlocks);
@@ -128,10 +138,17 @@ function calculateGoalPower() {
             break;
         case 2:
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Etherium";
-            var ethResult = (exp_reward * dailyEthBlocks).toFixed(4);
+            var ethResult = (exp_reward * dailyEthBlocks).toFixed(6);
             document.getElementById("daily").innerHTML = ethResult + " Etherium";
-            document.getElementById("weekly").innerHTML = (ethResult * 7).toFixed(4) + " Etherium";
-            document.getElementById("monthly").innerHTML = (ethResult * 30).toFixed(4) + " Etherium";
+            document.getElementById("weekly").innerHTML = (ethResult * 7).toFixed(6) + " Etherium";
+            document.getElementById("monthly").innerHTML = (ethResult * 30).toFixed(6) + " Etherium";
+            break;
+        case 3:
+            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " BNB";
+            var bnbResult = (exp_reward * dailyEthBlocks).toFixed(6);
+            document.getElementById("daily").innerHTML = bnbResult + " BNB";
+            document.getElementById("weekly").innerHTML = (bnbResult * 7).toFixed(6) + " BNB";
+            document.getElementById("monthly").innerHTML = (bnbResult * 30).toFixed(6) + " BNB";
             break;
         default:
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Rollertoken";
