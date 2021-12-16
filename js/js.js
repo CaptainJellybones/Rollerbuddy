@@ -142,10 +142,10 @@ function calculateGoalPower() {
             break;
         case 2:
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Ethereum";
-            var ethResult = (exp_reward * dailyEthBlocks).toFixed(6);
+            var ethResult = (exp_reward * dailyEthBlocks).toFixed(8);
             document.getElementById("daily").innerHTML = ethResult + " Etherium";
-            document.getElementById("weekly").innerHTML = (ethResult * 7).toFixed(6) + " Ethereum";
-            document.getElementById("monthly").innerHTML = (ethResult * 30).toFixed(6) + " Ethereum";
+            document.getElementById("weekly").innerHTML = (ethResult * 7).toFixed(8) + " Ethereum";
+            document.getElementById("monthly").innerHTML = (ethResult * 30).toFixed(8) + " Ethereum";
             break;
         case 3:
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " BNB";
