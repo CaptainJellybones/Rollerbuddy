@@ -80,18 +80,22 @@ function calculateGoalPower() {
     }
     switch (document.getElementById("goal-power-selector").selectedIndex) {
         case 0:
+            //GH/s
             goalpower *= 1000000000;
             console.log("goalpower after ghs conversion: " + goalpower);
             break;
         case 1:
+            //TH/s
             goalpower *= 1000000000000;
             console.log("goalpower after ths conversion: " + goalpower);
             break;
         case 2:
+            //PH/s
             goalpower *= 1000000000000000;
             console.log("goalpwer after phs conversion: " + goalpower);
             break;
         default:
+            //EH/s
             goalpower *= 1000000000000000000;
             console.log("goalpwer after ehs conversion: " + goalpower);
             break;
@@ -137,18 +141,18 @@ function calculateGoalPower() {
             document.getElementById("monthly").innerHTML = (dogeResult * 30).toFixed(4) + " Doge";
             break;
         case 2:
-            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Etherium";
+            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Ethereum";
             var ethResult = (exp_reward * dailyEthBlocks).toFixed(6);
             document.getElementById("daily").innerHTML = ethResult + " Etherium";
-            document.getElementById("weekly").innerHTML = (ethResult * 7).toFixed(6) + " Etherium";
-            document.getElementById("monthly").innerHTML = (ethResult * 30).toFixed(6) + " Etherium";
+            document.getElementById("weekly").innerHTML = (ethResult * 7).toFixed(6) + " Ethereum";
+            document.getElementById("monthly").innerHTML = (ethResult * 30).toFixed(6) + " Ethereum";
             break;
         case 3:
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " BNB";
-            var bnbResult = (exp_reward * dailyEthBlocks).toFixed(6);
+            var bnbResult = (exp_reward * dailyBnbBlocks).toFixed(8);
             document.getElementById("daily").innerHTML = bnbResult + " BNB";
-            document.getElementById("weekly").innerHTML = (bnbResult * 7).toFixed(6) + " BNB";
-            document.getElementById("monthly").innerHTML = (bnbResult * 30).toFixed(6) + " BNB";
+            document.getElementById("weekly").innerHTML = (bnbResult * 7).toFixed(8) + " BNB";
+            document.getElementById("monthly").innerHTML = (bnbResult * 30).toFixed(8) + " BNB";
             break;
         default:
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Rollertoken";

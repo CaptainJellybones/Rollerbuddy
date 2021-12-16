@@ -58,12 +58,12 @@
             <div class="inputlabel">
                 <label for="block-reward" class="spacing">Enter Block Reward For Desired Coin</label>
                 <br class="spacerInput">
-                <input class="inputCalc inputBlock" type="number" name="block-reward" id="block-reward"
+                <input class="inputCalc inputBlock" type="number" name="block-reward" id="block-reward" step="any"
                     oninput="calculateGoalPower()">
                 <select name="block-type" id="block-type" onchange="blockAmount(), calculateGoalPower()">
                     <option value="BTC">Bitcoin (BTC)</option>
                     <option value="DOGE">Doge (DOGE)</option>
-                    <option value="ETH">Etherium (ETH)</option>
+                    <option value="ETH">Ethereum (ETH)</option>
                     <option value="BNB">Binance Coin (BNB)</option>
                     <option value="RLT">RollerToken (RLT)</option>
                 </select>
@@ -85,6 +85,7 @@
                 <p>Rollerbuddy isn't endorsed by Rollercoin and does not reflect the views or opinions of anyone
                     officially
                     involved in producing and managing Rollercoin and their service(s).</p>
+                <a id="changelog">Changelog</a>
             </div>
         </footer>
     </div>
