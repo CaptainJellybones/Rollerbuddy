@@ -24,6 +24,11 @@ function blockAmount() {
             var blockreward = 0.012;
             document.getElementById("block-reward").value = 0.012;
             break;
+        case 4: 
+            //matic
+            var blockreward = 3;
+            document.getElementById("block-reward").value = 3;
+            break;
         default:
             //RLT
             var blockreward = 30;
@@ -153,6 +158,13 @@ function calculateGoalPower() {
             document.getElementById("daily").innerHTML = bnbResult + " BNB";
             document.getElementById("weekly").innerHTML = (bnbResult * 7).toFixed(8) + " BNB";
             document.getElementById("monthly").innerHTML = (bnbResult * 30).toFixed(8) + " BNB";
+            break;
+        case 4:
+            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " MATIC";
+            var bnbResult = (exp_reward * dailyBnbBlocks).toFixed(8);
+            document.getElementById("daily").innerHTML = bnbResult + " MATIC";
+            document.getElementById("weekly").innerHTML = (bnbResult * 7).toFixed(8) + " MATIC";
+            document.getElementById("monthly").innerHTML = (bnbResult * 30).toFixed(8) + " MATIC";
             break;
         default:
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Rollertoken";
