@@ -1,3 +1,5 @@
+const { Block } = require("strip-comments/lib/Node");
+
 console.log("Hello World");
 
 function blockAmount() {
@@ -28,9 +30,11 @@ function blockAmount() {
             //matic
             var blockreward = 3;
             document.getElementById("block-reward").value = 3;
+            console.log("matic end");
             break;
         default:
             //RLT
+            console.log("rlt start");
             var blockreward = 30;
             document.getElementById("block-reward").value = 30;
             break;
@@ -123,6 +127,7 @@ function calculateGoalPower() {
     const dailyDogeBlocks = secFullDay / BlockTimer;
     const dailyEthBlocks = secFullDay / BlockTimer;
     const dailyBnbBlocks = secFullDay / BlockTimer;
+    const dailyMaticBlocks = secFullDay / BlockTimer;
     console.log(dailyBtcBlocks + ", " + dailyDogeBlocks + ", " + dailyEthBlocks)
 
     console.log("DailyBTC " + dailyBtcBlocks);
@@ -161,10 +166,10 @@ function calculateGoalPower() {
             break;
         case 4:
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " MATIC";
-            var bnbResult = (exp_reward * dailyBnbBlocks).toFixed(8);
-            document.getElementById("daily").innerHTML = bnbResult + " MATIC";
-            document.getElementById("weekly").innerHTML = (bnbResult * 7).toFixed(8) + " MATIC";
-            document.getElementById("monthly").innerHTML = (bnbResult * 30).toFixed(8) + " MATIC";
+            var maticResult = (exp_reward * dailyMaticBlocks).toFixed(8);
+            document.getElementById("daily").innerHTML = maticResult + " MATIC";
+            document.getElementById("weekly").innerHTML = (maticResult * 7).toFixed(8) + " MATIC";
+            document.getElementById("monthly").innerHTML = (maticResult * 30).toFixed(8) + " MATIC";
             break;
         default:
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Rollertoken";
