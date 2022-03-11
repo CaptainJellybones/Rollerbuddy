@@ -145,7 +145,7 @@ function calculateGoalPower() {
             break;
         case 1:
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(4) + " Doge";
-            var dogeResult = (exp_reward * dailyDogeBlocks).toFixed(4);
+            var dogeResult = (exp_reward * dailyDogeBlocks).toFixed(6);
             document.getElementById("daily").innerHTML = dogeResult + " Doge";
             document.getElementById("weekly").innerHTML = (dogeResult * 7).toFixed(4) + " Doge";
             document.getElementById("monthly").innerHTML = (dogeResult * 30).toFixed(4) + " Doge";
