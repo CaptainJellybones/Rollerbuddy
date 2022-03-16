@@ -1,5 +1,3 @@
-const { Block } = require("strip-comments/lib/Node");
-
 console.log("Hello World");
 
 function blockAmount() {
