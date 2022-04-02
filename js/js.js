@@ -32,7 +32,13 @@ function blockAmount() {
             document.getElementById("block-reward").value = 3;
             console.log("matic end");
             break;
-        default:
+        case 5: 
+            //SOL
+            var blockreward = 0.5;
+            document.getElementById("block-reward").value = 0.05;
+            console.log("sol end");
+            break;
+    default:
             //RLT
             console.log("rlt start");
             var blockreward = 30;
@@ -119,11 +125,6 @@ function calculateGoalPower() {
     const secFullDay = 86400;
 
     const dailyBlocks = secFullDay / BlockTimer;
-    console.log(dailyBtcBlocks + ", " + dailyDogeBlocks + ", " + dailyEthBlocks)
-
-    console.log("DailyBTC " + dailyBtcBlocks);
-    console.log("DailyDOGE " + dailyDogeBlocks);
-    console.log("DailyETH " + dailyEthBlocks);
     console.log(exp_reward);
 
     switch (document.getElementById("block-type").selectedIndex) {
@@ -161,6 +162,13 @@ function calculateGoalPower() {
             document.getElementById("daily").innerHTML = maticResult + " MATIC";
             document.getElementById("weekly").innerHTML = (maticResult * 7).toFixed(8) + " MATIC";
             document.getElementById("monthly").innerHTML = (maticResult * 30).toFixed(8) + " MATIC";
+            break;
+        case 5:
+            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " SOL";
+            var solResult = (exp_reward * dailyBlocks).toFixed(8);
+            document.getElementById("daily").innerHTML = solResult + " SOL";
+            document.getElementById("weekly").innerHTML = (solResult * 7).toFixed(8) + " SOL";
+            document.getElementById("monthly").innerHTML = (solResult * 30).toFixed(8) + " SOL";
             break;
         default:
             document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Rollertoken";
