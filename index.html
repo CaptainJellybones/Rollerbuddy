@@ -70,6 +70,13 @@
                     <option value="RLT">RollerToken (RLT)</option>
                 </select>
             </div>
+
+            <!-- Block Timer controller -->
+            <div class="inputlabel">
+                <label for="block-timer" class="spacing">Enter Block Timer (Update ONLY if needed)</label>
+                <br class="spacerInput">
+                <input class="inputCalc" type="number" value="10" name="block-timer" id="block-timer" step="any" oninput="calculateGoalPower()">
+            </div>
             <button id="calcbtn" style="margin-top: 10px;" class="spacing" onclick="calculateGoalPower()">Calculate</button>
         </div>
 
