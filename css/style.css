@@ -6,10 +6,53 @@
 body {
     background-color: #181928;
     margin: 0;
+    color: white;
+    font-family: "PixelOM", sans-serif;
+}
+
+
+.jumbotron {
+    margin-bottom: 25px;
 }
 
 .titleText {
     color: white;
-    font-family: "PixelOM", sans-serif;
     font-size: 2rem;
+}
+
+.card {
+    background-color: #2F3045;
+    text-align: center;
+    color: white;
+}
+
+.card-header {
+    font-size: 1.9rem;
+}
+
+.card-body {
+    font-size: 1.5rem;
+}
+
+.card-body > input {
+    width: 100%;
+}
+
+.card-body > input::-webkit-outer-spin-button,
+.card-body > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.personalPower {
+    margin-bottom: 15px;
+}
+
+.rewardBody {
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+
+#ethImg {
+    width: 40px;
 }

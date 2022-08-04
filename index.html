@@ -12,16 +12,186 @@
 </head>
 <body>
     <header class="jumbotron container-fluid">
+        <!-- Header Row -->
         <div class="row">
             <div class="col-lg-2">
                 <img class="hamsterPirate" src="./img/hamsterpirate.png" alt="A Rollercoin Hamster in Pirate Attire">
             </div>
             <div class="col-lg-10">
-                <p class="titleText">Rollerbuddy - Your personal Rollercoin calculator</p>
+                <p class="titleText">Rollerbuddy - Your Personal Rollercoin Calculator</p>
             </div>
         </div>
     </header>
+    <!-- Personal Power Input -->
+    <div class="container personalPower">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <span><img src="https://rollercoin.com/static/images/monitor.fa3f8b7de999712cdf25..svg" alt="My Power Image"> My Power</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row no-gutters">
+                                <div class="col-10">
+                                    <input type="number" step="any" class="networkPowerInput" id="rltPower"></div>
+                                <div class="col-2">
+                                    <select name="network-power-prefix" onchange="">
+                                        <option value="ghs">GH/s</option>
+                                        <option value="ths">TH/s</option>
+                                        <option value="phs">PH/s</option>
+                                        <option selected value="ehs">EH/s</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
 
+    <!-- Power Input Row RLT/BTC/ETH/BNB -->
+    <div class="container coins">
+        <div class="row firstPowerRow">
+            <!-- RLT -->
+            <div class="col-md-3 ">
+                <div class="card">
+                    <div class="card-header"><img src="https://rollercoin.com/static/img/wallet/rlt.svg" alt="RLT-Coin"> RLT</div>
+                    <div class="card-body">
+                        <p>Network Power (EH/s)</p>
+                        <input type="number" step="any" class="networkPowerInput" id="rltPower">
+                        <!-- Block Reward -->
+                        <div class="rewardBody">
+                            <div class="row">
+                                <div class="col-8">Block Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                            <!-- Daily Reward -->
+                            <div class="row">
+                                <div class="col-8">Daily Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                            <!-- Weekly Reward -->
+                            <div class="row">
+                                <div class="col-8">Weekly Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                            <!-- Monthly Reward -->
+                            <div class="row">
+                                <div class="col-8">Monthly Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- BTC -->
+            <div class="col-md-3 ">
+                <div class="card">
+                    <div class="card-header"><img src="https://rollercoin.com/static/img/wallet/btc.svg" alt="RLT-Coin"> BTC</div>
+                    <div class="card-body">
+                        <p>Network Power (EH/s)</p>
+                        <input type="number" step="any" class="networkPowerInput" id="rltPower">
+                        <!-- Block Reward -->
+                        <div class="rewardBody">
+                            <div class="row">
+                                <div class="col-8">Block Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                            <!-- Daily Reward -->
+                            <div class="row">
+                                <div class="col-8">Daily Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                            <!-- Weekly Reward -->
+                            <div class="row">
+                                <div class="col-8">Weekly Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                            <!-- Monthly Reward -->
+                            <div class="row">
+                                <div class="col-8">Monthly Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ETH -->
+            <div class="col-md-3 ">
+                <div class="card">
+                    <div class="card-header"><img id="ethImg" src="https://rollercoin.com/static/img/wallet/eth.svg" alt="RLT-Coin"> ETH</div>
+                    <div class="card-body">
+                        <p>Network Power (EH/s)</p>
+                        <input type="number" step="any" class="networkPowerInput" id="rltPower">
+                        <!-- Block Reward -->
+                        <div class="rewardBody">
+                            <div class="row">
+                                <div class="col-8">Block Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                            <!-- Daily Reward -->
+                            <div class="row">
+                                <div class="col-8">Daily Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                            <!-- Weekly Reward -->
+                            <div class="row">
+                                <div class="col-8">Weekly Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                            <!-- Monthly Reward -->
+                            <div class="row">
+                                <div class="col-8">Monthly Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- BNB -->
+            <div class="col-md-3 ">
+                <div class="card">
+                    <div class="card-header"><img src="https://rollercoin.com/static/img/wallet/bnb.svg" alt="RLT-Coin"> BNB</div>
+                    <div class="card-body">
+                        <p>Network Power (EH/s)</p>
+                        <input type="number" step="any" class="networkPowerInput" id="rltPower">
+                        <!-- Block Reward -->
+                        <div class="rewardBody">
+                            <div class="row">
+                                <div class="col-8">Block Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                            <!-- Daily Reward -->
+                            <div class="row">
+                                <div class="col-8">Daily Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                            <!-- Weekly Reward -->
+                            <div class="row">
+                                <div class="col-8">Weekly Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                            <!-- Monthly Reward -->
+                            <div class="row">
+                                <div class="col-8">Monthly Reward:</div>
+                                <div class="col-4"> 1337</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Power Input Row MATIC/DOGE/SOL -->
+        <div class="row secondPowerRow">
+            <div class="col-md-6 "></div>
+            <div class="col-md-6 "></div>
+            <div class="col-md-6 "></div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="./js/js.js"></script>
