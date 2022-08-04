@@ -56,3 +56,11 @@ body {
 #ethImg {
     width: 40px;
 }
+
+.secondPowerRow {
+    margin-top: 25px;
+}
+
+.columnWidthOverride {
+    width: 12.499%;
+}
