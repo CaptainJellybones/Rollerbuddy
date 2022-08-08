@@ -32,6 +32,7 @@ body {
 
 .card-body {
     font-size: 1.5rem;
+    padding-bottom: 0.3rem;
 }
 
 .card-body > input {
@@ -63,4 +64,19 @@ body {
 
 .columnWidthOverride {
     width: 12.499%;
+}
+
+
+
+/* Functional CSS */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.collapseArrow {
+    height: 20px;
 }
