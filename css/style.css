@@ -80,3 +80,7 @@ body {
 .collapseArrow {
     height: 20px;
 }
+
+.imgFlip {
+    transform: rotate(180deg);
+}
