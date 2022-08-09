@@ -32,7 +32,17 @@
                         <span><img src="https://rollercoin.com/static/images/monitor.fa3f8b7de999712cdf25..svg" alt="My Power Image"> My Power</span>
                     </div>
                     <div class="card-body">
-                        <input type="number" step="any" class="networkPowerInput" id="rltPower"></div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                            <div class="input-group-append">
+                                <button id="powerButton" class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onchange="calculate()">GH/s</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">GH/s</a>
+                                    <a class="dropdown-item" href="#">TH/s</a>
+                                    <a class="dropdown-item" href="#">PH/s</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             <div class="col-md-4"></div>
@@ -73,6 +83,7 @@
                                 </div>
                             </div>
                         </div>
+                        <img class="collapseArrow" src="./img/arrow_down.png" alt="Collapse Arrow">
                     </div>
                 </div>
             </div>
@@ -107,6 +118,7 @@
                                 </div>
                             </div>
                         </div>
+                        <img class="collapseArrow" src="./img/arrow_down.png" alt="Collapse Arrow">
                     </div>
                 </div>
             </div>
@@ -141,6 +153,7 @@
                                 </div>
                             </div>
                         </div>
+                        <img class="collapseArrow" src="./img/arrow_down.png" alt="Collapse Arrow">
                     </div>
                 </div>
             </div>
@@ -216,6 +229,7 @@
                                 </div>
                             </div>
                         </div>
+                        <img class="collapseArrow" src="./img/arrow_down.png" alt="Collapse Arrow">
                     </div>
                 </div>
             </div>
@@ -249,6 +263,7 @@
                                 </div>
                             </div>
                         </div>
+                        <img class="collapseArrow" src="./img/arrow_down.png" alt="Collapse Arrow">
                     </div>
                 </div>
             </div>
@@ -282,6 +297,7 @@
                                 </div>
                             </div>
                         </div>
+                        <img class="collapseArrow" src="./img/arrow_down.png" alt="Collapse Arrow">
                     </div>
                 </div>
             </div>
@@ -289,7 +305,9 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="./js/js.js"></script>
 </body>
 </html>

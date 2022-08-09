@@ -14,24 +14,6 @@ for (let i = 0; i < coinCards.length; i++) {
     console.log("eventlistener " + i + " added");
 }
 
-// function expand(event) {
-//     if (event.current.classList.includes('hidden')) {
-//         alert("You clicked while hidden");
-//     } else {
-//         alert("You clicked while visible");
-//     }
-// }
-
-// coinCards.forEach(card => {
-//     card.addEventListener('click', rewardViewToggle(card))
-// })
-
-// function visibilityToggle(element) {
-//     if (element.className == "hidden") {
-//         element.classList.remove('hidden');
-//         console.log("I've been clicked");
-//     } else {
-//         element.classList.add('hidden');
-//         console.log("I've been clicked");
-//     }
-// }
+function calculate() {
+    console.log("Calculate Initiated")
+}

@@ -10,9 +10,12 @@ body {
     font-family: "PixelOM", sans-serif;
 }
 
-
 .jumbotron {
     margin-bottom: 25px;
+}
+
+.hamsterPirate {
+    width: 5.3rem;
 }
 
 .titleText {
@@ -49,6 +52,11 @@ body {
     margin-bottom: 15px;
 }
 
+#powerButton {
+    color: white;
+    border-color: white;
+}
+
 .rewardBody {
     font-size: 1.4rem;
     margin-top: 10px;
@@ -71,10 +79,12 @@ body {
 /* Functional CSS */
 .hidden {
     display: none;
+    transition: display 0.4s;
 }
 
 .visible {
     display: block;
+    transition: display 0.4s;
 }
 
 .collapseArrow {
@@ -82,5 +92,6 @@ body {
 }
 
 .imgFlip {
-    transform: rotate(180deg);
+    transform: rotateX(180deg);
+    /* transition: transform 0.4s; */
 }
