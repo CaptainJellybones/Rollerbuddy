@@ -27,14 +27,14 @@ for (let i = 0; i < coinCards.length; i++) {
 
 function calculate() {
     // Check which power-prefix user selected
-    if (document.querySelector("#powerButton").innerHTML == "GH/s") {
+    if (document.querySelector(".myPowerPrefix").value == "GH/s") {
         userPower *= 1000000000;
-    } else if (document.querySelector("#powerButton").innerHTML == "TH/s") {
+    } else if (document.querySelector(".myPowerPrefix").value == "TH/s") {
         userPower *= 1000000000000;
-    } else if (document.querySelector("#powerButton").innerHTML == "GH/s") {
+    } else if (document.querySelector(".myPowerPrefix").value == "GH/s") {
         userPower *= 1000000000000000;
     } else {
         userPower *= 1000000000000000000;
     }
-    console.log("User has selected: " + document.querySelector("#powerButton").innerHTML);
+    console.log("User has selected: " + document.querySelector(".myPowerInput").value + " " + document.querySelector(".myPowerPrefix").value);
 }

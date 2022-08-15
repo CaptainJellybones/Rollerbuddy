@@ -66,6 +66,11 @@ body {
     margin-top: 10px;
 }
 
+.powerInputBody {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
 .secondPowerRow {
     margin-top: 25px;
 }
