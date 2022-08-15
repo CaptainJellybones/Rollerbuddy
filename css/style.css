@@ -33,6 +33,10 @@ body {
     font-size: 1.9rem;
 }
 
+.card-header > img {
+    width: 40px;
+}
+
 .card-body {
     font-size: 1.5rem;
     padding-bottom: 0.3rem;
@@ -62,10 +66,6 @@ body {
     margin-top: 10px;
 }
 
-#ethImg {
-    width: 40px;
-}
-
 .secondPowerRow {
     margin-top: 25px;
 }
@@ -73,8 +73,6 @@ body {
 .columnWidthOverride {
     width: 12.499%;
 }
-
-
 
 /* Functional CSS */
 .hidden {
