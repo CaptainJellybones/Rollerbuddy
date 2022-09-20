@@ -36,11 +36,21 @@ function blockAmount() {
             document.getElementById("block-reward").value = 0.05;
             console.log("sol end");
             break;
+        case 6:
+            //rst
+            var blockreward = 30;
+            document.getElementById("block-reward").value = 30;
+            break;
+        case 7:
+            //trx
+            var blockreward = 150;
+            document.getElementById("block-reward").value = 150;
+            break;
     default:
             //RLT
             console.log("rlt start");
-            var blockreward = 30;
-            document.getElementById("block-reward").value = 30;
+            var blockreward = 90;
+            document.getElementById("block-reward").value = 90;
             break;
     }
 }
@@ -170,12 +180,29 @@ function calculateGoalPower() {
             document.getElementById("weekly").innerHTML = (solResult * 7).toFixed(8) + " SOL";
             document.getElementById("monthly").innerHTML = (solResult * 30).toFixed(8) + " SOL";
             break;
-        default:
-            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " Rollertoken";
+        case 6: 
+            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " RLT";
+            var solResult = (exp_reward * dailyBlocks).toFixed(8);
+            document.getElementById("daily").innerHTML = solResult + " RLT";
+            document.getElementById("weekly").innerHTML = (solResult * 7).toFixed(8) + " RLT";
+            document.getElementById("monthly").innerHTML = (solResult * 30).toFixed(8) + " RLT";
+            break;
+        case 7:
+            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " RST";
+            var solResult = (exp_reward * dailyBlocks).toFixed(8);
+            document.getElementById("daily").innerHTML = solResult + " RST";
+            document.getElementById("weekly").innerHTML = (solResult * 7).toFixed(8) + " RST";
+            document.getElementById("monthly").innerHTML = (solResult * 30).toFixed(8) + " RST";
+            break;
+        case 8:
+            document.getElementById("exp_reward").innerHTML = exp_reward.toFixed(8) + " TRX";
             var rltResult = (exp_reward * dailyBlocks).toFixed(4);
-            document.getElementById("daily").innerHTML = rltResult + " Rollertoken";
-            document.getElementById("weekly").innerHTML = (rltResult * 7).toFixed(4) + " Rollertoken";
-            document.getElementById("monthly").innerHTML = (rltResult * 30).toFixed(4) + " Rollertoken";
+            document.getElementById("daily").innerHTML = rltResult + " TRX";
+            document.getElementById("weekly").innerHTML = (rltResult * 7).toFixed(4) + " TRX";
+            document.getElementById("monthly").innerHTML = (rltResult * 30).toFixed(4) + " TRX";
+            break;
+        default:
+            console.log("Something went wrong");
             break;
     }
 }
