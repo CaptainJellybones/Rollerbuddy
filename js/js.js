@@ -37,4 +37,12 @@ function calculate() {
         userPower *= 1000000000000000000;
     }
     console.log("User has selected: " + document.querySelector(".myPowerInput").value + " " + document.querySelector(".myPowerPrefix").value);
+
+    
+
+    // rewardCards.forEach(element => {
+    //     let networkPower = element.querySelector(".networkPowerInput").value;
+
+    //     element.querySelector(".blockRewardResult") = rltBlockReward * (userPower / networkPower);
+    // });
 }
