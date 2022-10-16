@@ -38,7 +38,7 @@ function blockAmount() {
             break;
         case 6:
             //rst
-            var blockreward = 30;
+            var blockreward = 20;
             document.getElementById("block-reward").value = 30;
             break;
         case 7:
@@ -49,7 +49,7 @@ function blockAmount() {
     default:
             //RLT
             console.log("rlt start");
-            var blockreward = 90;
+            var blockreward = 60;
             document.getElementById("block-reward").value = 90;
             break;
     }
