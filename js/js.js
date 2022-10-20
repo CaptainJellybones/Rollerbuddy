@@ -50,7 +50,7 @@ function blockAmount() {
             //RLT
             console.log("rlt start");
             var blockreward = 60;
-            document.getElementById("block-reward").value = 90;
+            document.getElementById("block-reward").value = 60;
             break;
     }
 }
