@@ -39,7 +39,7 @@ function blockAmount() {
         case 6:
             //rst
             var blockreward = 20;
-            document.getElementById("block-reward").value = 30;
+            document.getElementById("block-reward").value = 20;
             break;
         case 7:
             //trx
