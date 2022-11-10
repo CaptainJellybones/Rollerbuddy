@@ -12,6 +12,7 @@ body {
 
 .jumbotron {
     margin-bottom: 25px;
+    background-color: #181928;
 }
 
 .hamsterPirate {
@@ -27,6 +28,7 @@ body {
     background-color: #2F3045;
     text-align: center;
     color: white;
+    margin-bottom: 5px;
 }
 
 .card-header {
