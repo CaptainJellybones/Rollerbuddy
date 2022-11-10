@@ -13,10 +13,14 @@ let solBlockReward = 0.5;
 let secFullDay = 86400;
 let userPower;
 
-// May god forgive me for this function | toggle for card full-view
+// May god forgive me for this function | toggle for card full-view except for on inputs
 function rewardViewToggle(element) {
-    element.currentTarget.children[1].children[2].children[1].classList.toggle('hidden');
-    element.currentTarget.children[1].children[3].classList.toggle('imgFlip');
+    if (element.target.classList.contains('input')) {
+        // Do nothing...
+    } else {
+        element.currentTarget.children[1].children[2].children[1].classList.toggle('hidden');
+        element.currentTarget.children[1].children[3].classList.toggle('imgFlip');
+    }
 }
 
 // Click event listener for every coin card
