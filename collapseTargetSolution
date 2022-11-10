@@ -1,0 +1,15 @@
+let blue = document.getElementById("blue");
+let red = document.getElementById("red");
+
+function handleClick(clicked) {
+  if (clicked != 'blue') {
+    alert("You clicked the red Square");
+  }
+}
+
+blue.addEventListener("click", function(event) {
+  let divClick = event.target.id;
+  console.log(event.target.id);
+  handleClick(divClick);
+})
+
