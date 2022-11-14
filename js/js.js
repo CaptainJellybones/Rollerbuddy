@@ -43,6 +43,9 @@ for (let i = 0; i < coinCards.length; i++) {
 }
 
 function calculate() {
+    // Get userpower
+    userPower = document.querySelector("#myPowerInput").value;
+
     // Check which power-prefix user selected
     if (document.querySelector(".myPowerPrefix").value == "GH/s") {
         userPower *= 1000000000;
@@ -57,10 +60,13 @@ function calculate() {
 
     // Determine the power and coin name of current coin, then use it to determine object to read
     coinCards.forEach(element => {
-        calcPower = element.children[1].children[1].value;
+        calcPower = element.children[1].children[1].value * 1000000000000000000000;
         tempCoin = element.children[0].innerText;
         curCoin = coins.find(x => x.coinName === tempCoin);
 
+        var exp_reward = (curCoin.coinReward * (userPower / calcPower)).toFixed(4);
+        // Block Reward
+        element.querySelector(".blockReward").innerText = exp_reward;
         console.log(curCoin.coinName + " " + curCoin.coinReward)
     });
 }
