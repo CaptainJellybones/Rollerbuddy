@@ -1,6 +1,6 @@
 const rewardCards = document.querySelectorAll(".rewardBody");
 const coinCards = document.querySelectorAll('.coinCard');
-var coins = [];
+const coins = [];
 let secFullDay = 86400;
 let userPower;
 
@@ -19,13 +19,13 @@ function addCoin(name, reward, networkPower, blockTimer) {
 }
 
 // All of the coins and their base reward
-addCoin('rlt', 30, NaN, 600);
-addCoin('btc', 30000, NaN, 600);
-addCoin('eth', 0.005, NaN, 600);
-addCoin('bnb', 0.012, NaN, 600);
-addCoin('matic', 3, NaN, 600);
-addCoin('doge', 20, NaN, 600);
-addCoin('sol', 0.5, NaN, 600);
+addCoin('RLT', 30, NaN, 600);
+addCoin('BTC', 30000, NaN, 600);
+addCoin('ETH', 0.005, NaN, 600);
+addCoin('BNB', 0.012, NaN, 600);
+addCoin('MATIC', 3, NaN, 600);
+addCoin('DOGE', 20, NaN, 600);
+addCoin('SOL', 0.5, NaN, 600);
 
 // May god forgive me for this function | toggle for card full-view except for on inputs
 function rewardViewToggle(element) {
@@ -56,6 +56,13 @@ function calculate() {
     }
     console.log("User has selected: " + document.querySelector(".myPowerInput").value + " " + document.querySelector(".myPowerPrefix").value);
 
-    
+    // Determine the power and coin name of current coin, then use it to determine object to read
+    coinCards.forEach(element => {
+        calcPower = element.children[1].children[1].value;
+        tempCoin = element.children[0].innerText;
+        curCoin = coins.find(x => x.coinName === tempCoin);
+
+        console.log(curCoin.coinReward)
+    });
 }
 
