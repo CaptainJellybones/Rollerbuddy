@@ -27,7 +27,7 @@ addCoin('MATIC', 3, NaN, 600);
 addCoin('DOGE', 20, NaN, 600);
 addCoin('SOL', 0.5, NaN, 600);
 
-// May god forgive me for this function | toggle for card full-view except for on inputs
+//toggle for card full-view except for when inputs are clicked
 function rewardViewToggle(element) {
     if (element.target.classList.contains('input')) {
         // Do nothing...
@@ -37,10 +37,9 @@ function rewardViewToggle(element) {
     }
 }
 
-// Click event listener for every coin card
+// Click event listener for every coin card that listens for rewardViewToggle()
 for (let i = 0; i < coinCards.length; i++) {
     coinCards[i].addEventListener('click', rewardViewToggle);
-    console.log("eventlistener " + i + " added");
 }
 
 function calculate() {
@@ -62,7 +61,7 @@ function calculate() {
         tempCoin = element.children[0].innerText;
         curCoin = coins.find(x => x.coinName === tempCoin);
 
-        console.log(curCoin.coinReward)
+        console.log(curCoin.coinName + " " + curCoin.coinReward)
     });
 }
 
