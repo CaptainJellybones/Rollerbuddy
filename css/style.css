@@ -37,6 +37,7 @@ body {
 
 .card-header > img {
     width: 40px;
+    margin-right: 3%;
 }
 
 .card-body {
