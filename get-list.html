@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Link Extraction</title>
+</head>
+
+<body>
+  <h2>Link Extraction</h2>
+  <label for="inputLinks">Enter newline-separated links:</label><br>
+  <textarea id="inputLinks" rows="5" cols="40"></textarea><br>
+  <button onclick="extractAndDisplay()">Extract Links</button>
+  <button onclick="addSameRewardToAll()">Add Same RLT Reward to All</button>
+  <button onclick="exportToCSV()">Export to CSV</button>
+  <h3>Extracted Links:</h3>
+  <table id="extractedLinks">
+    <thead>
+      <tr>
+        <th>User Link</th>
+        <th>RLT Reward</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <h3>Potentially Altered Links:</h3>
+  <pre id="alteredLinks"></pre>
+
+  <script>
+    function extractLastPart(links) {
+      const linkArray = links.split('\n').filter(Boolean); // Split and filter out empty strings
+      const extractedParts = [];
+      const potentiallyAlteredParts = [];
+
+      for (const link of linkArray) {
+        const trimmedLink = link.trim(); // Trim leading and trailing whitespace
+        const cleanedLink = trimmedLink.endsWith('/') ? trimmedLink.slice(0, -1) : trimmedLink; // Remove trailing slash
+        if (cleanedLink) { // Check if the cleaned link is not empty
+          const parts = cleanedLink.split('/');
+          const lastPart = parts[parts.length - 1];
+          extractedParts.push(lastPart);
+
+          // Check if the last part contains any uppercase letters.
+          if (/[A-Z]/.test(lastPart)) {
+            potentiallyAlteredParts.push(lastPart);
+          }
+        }
+      }
+
+      const extractedResult = extractedParts.join('\n');
+      const potentiallyAlteredResult = potentiallyAlteredParts.join('\n');
+      return {
+        extractedResult,
+        potentiallyAlteredResult
+      };
+    }
+
+    function extractAndDisplay() {
+      const inputLinksElement = document.getElementById('inputLinks');
+      const extractedLinksTableBody = document.querySelector('#extractedLinks tbody');
+      const alteredLinksElement = document.getElementById('alteredLinks');
+      const inputLinks = inputLinksElement.value;
+      const {
+        extractedResult,
+        potentiallyAlteredResult
+      } = extractLastPart(inputLinks);
+
+      const extractedLinksArray = extractedResult.split('\n');
+      extractedLinksTableBody.innerHTML = ''; // Clear the extracted links table body
+
+      // Create a table row for each extracted link with input fields for user link and RLT reward
+      for (const link of extractedLinksArray) {
+        const row = document.createElement('tr');
+        const userCell = document.createElement('td');
+        const rewardCell = document.createElement('td');
+        const userLinkInput = document.createElement('input');
+        const rewardInput = document.createElement('input');
+
+        userLinkInput.type = 'text';
+        userLinkInput.value = link;
+        userCell.appendChild(userLinkInput);
+
+        rewardInput.type = 'text';
+        rewardCell.appendChild(rewardInput);
+
+        row.appendChild(userCell);
+        row.appendChild(rewardCell);
+        extractedLinksTableBody.appendChild(row);
+      }
+
+      alteredLinksElement.textContent = potentiallyAlteredResult;
+    }
+
+    function addSameRewardToAll() {
+      const rewardInputElements = document.querySelectorAll('#extractedLinks tbody td:nth-child(2) input[type="text"]');
+      const rewardValue = prompt('Enter the RLT reward to add to all users:');
+      if (rewardValue !== null) {
+        rewardInputElements.forEach((rewardInput) => {
+          rewardInput.value = rewardValue;
+        });
+      }
+    }
+
+    function exportToCSV() {
+      const table = document.getElementById('extractedLinks');
+      const rows = table.querySelectorAll('tbody tr');
+      const headers = Array.from(table.querySelectorAll('thead th')).map(header => header.textContent);
+      const csvData = [];
+
+      // Add headers to CSV data
+      csvData.push(headers.join(','));
+
+      // Add row data to CSV data
+      // Add row data to CSV data
+      rows.forEach(row => {
+        const rowData = Array.from(row.querySelectorAll('td')).map(cell => cell.querySelector('input').value);
+
+        // Add three empty cells to the end of each row
+        for (let i = 0; i < 6; i++) {
+          rowData.push('');
+        }
+
+        // Now, join the rowData into a CSV row and add it to csvData
+        csvData.push(rowData.join(','));
+      });
+
+
+
+      // Create a Blob with the CSV data
+      const csvContent = csvData.join('\n');
+      const blob = new Blob([csvContent], {
+        type: 'text/csv'
+      });
+      const blobUrl = URL.createObjectURL(blob);
+
+      // Create a download link for the Blob
+      const a = document.createElement('a');
+      a.href = blobUrl;
+      a.download = 'extracted_links.csv';
+      document.body.appendChild(a);
+      a.click();
+
+      // Clean up
+      document.body.removeChild(a);
+      URL.revokeObjectURL(blobUrl);
+    }
+  </script>
+</body>
+
+</html>
