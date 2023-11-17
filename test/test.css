@@ -1,118 +1,67 @@
 body {
-    height: 100%;
-    position: relative;
-    background-color: rgba(224,143,98,1);
+    /* height: 100%;
+    position: relative; */
+    background-color: #211C26;
     font-family: 'Belleza', sans-serif;
     color: white;
     text-shadow: black 0px 0px 10px;
 }
 
-.jumbotron {
-    background: rgb(163,86,56);
-    background: linear-gradient(180deg, rgba(163,86,56,1) 0%, rgba(224,143,98,1) 35%);
-    margin-bottom: 0;
-    padding-bottom: 1rem;
-}
-
-label {
-    margin-bottom: 0;
-}
-
-footer {
-    bottom: 0;
-    text-align: center;
-    padding: auto;
-    z-index: 2;
-    padding: 5% 5% 0;
-}
-
-/** Support me Navframe**/
-
-.supportMe {
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2F3045;
+    overflow-x: hidden;
+    padding-top: 60px;
     transition: 0.5s;
 }
 
-.labeltext {
-    margin-left: 3%;
-}
-.hashinput {
-    margin-bottom: 35px;
-}
-.hashinputdiv {
-    padding-bottom: 10px;
-    position: relative;
-    margin: auto;
-}
-
-.hashinputdiv, label {
-    margin-top: 7px;
-}
-
-.hashinputdiv, select {
-    height: 30px;
-}
-
-.hashpowerHelpIMG {
-    position: absolute;
-    margin-left: 110%;
-    margin-top: -90%;
-    display: inline-block;
-    z-index: 100;
-    opacity: 1;
-    transition: opacity 0.5s linear;
-}
-
-.hide {
-    opacity: 0;
-    transition: opacity 0.5s linear;
-}
-
-.hidden {
-    opacity: 0;
-}
-
-.fa-question-circle {
-    margin-left: 4px;
-    position: absolute;
-    color: rgb(174, 209, 255);
-}
-
-.netpowerinput, .col-md-2 {
-    padding-right: 0;
-}
-
-.netpowerrlt {
-    padding-left: 0;
-}
-
-.main-section {
-    background: rgb(224,143,98);
-    background: linear-gradient(180deg, rgba(224,143,98,1) 0%, rgba(224,143,98,11) 35%);
-    z-index: 2;
-}
-
-.spacing {
-    margin-top: 10px;
-}
-
-.edger {
-    padding-left: 15px;
-}
-
-#hamsterpirate {
-    padding-left: 6%;
-}
-
-.inputlabel {
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #03E1E4;
     display: block;
+    transition: 0.3s;
+  }
+
+.sidenav a:hover {
+color: #029698;
 }
 
-/** Technical re-usable style **/ 
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
 
-.pointer {
+#navOpen {
+    font-size: 2rem;
+    margin: 0.5rem 1rem;
     cursor: pointer;
 }
 
-.inline-block {
-    display: inline-block;
+.screenDimmer {
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background:rgba(255,255,255,0.5);
 }
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
