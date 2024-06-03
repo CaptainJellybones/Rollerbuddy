@@ -3,134 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./test/test.css">
+    <title>RollerCoin Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/test.css">
 </head>
 <body>
-    <div>
-            <!-- Nav-closer -->
-        <div class="sidenav" id="buddySidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="">Calculator</a>
-            <a href="">Miner List</a>
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+          </div>
         </div>
-            <!-- Nav-Opener -->
-        <span id="navOpen" onclick="openNav()">&#9776;</span>
-
-            <!-- Nav-Menu -->
-        <div class="main">
-            
-        </div>
-
-        <div class="row no-gutters mining-wrapper">
-            <div></div>
-            <div class="row">
-                <div class="mining-container col-12 col-lg-4">
-                    <div class="mining-content">
-                        <div class="mining-title">
-                            <p>Network Power</p>
-                        </div>
-                        <div class="mining-crypto">
-                            <div class="coin-wrapper" id="RLT">
-                                <label for="rlt">
-                                    <img class="coin-img" src="./img/rlt.svg" alt="">
-                                    <p class="coin-text">RLT: </p>
-                                </label>
-                                <input type="text" id="rlt">
-                            </div>
-                            <div class="coin-wrapper" id="RST">
-                                <label for="rst">
-                                    <img class="coin-img" src="./img/rst.svg" alt="">
-                                    <p class="coin-text">RST: </p>
-                                </label>
-                                <input type="text" id="rst">
-                            </div>
-                            <div class="coin-wrapper" id="TRX">
-                                <label for="trx">
-                                    <img class="coin-img" src="./img/trx.svg" alt="">
-                                    <p class="coin-text">TRX: </p>
-                                </label>
-                                <input type="text" id="trx">
-                            </div>
-                            <div class="coin-wrapper" id="DOGE">
-                                <label for="doge">
-                                    <img class="coin-img" src="./img/doge.svg" alt="">
-                                    <p class="coin-text">DOGE: </p>
-                                </label>
-                                <input type="text" id="doge">
-                            </div>
-                            <div class="coin-wrapper" id="BTC">
-                                <label for="btc">
-                                    <img class="coin-img" src="./img/btc.svg" alt="">
-                                    <p class="coin-text">BTC: </p>
-                                </label>
-                                <input type="text" id="btc">
-                            </div>
-                            <div class="coin-wrapper" id="ETH">
-                                <label for="eth">
-                                    <img class="coin-img" src="./img/eth.svg" alt="">
-                                    <p class="coin-text">ETH: </p>
-                                </label>
-                                <input type="text" id="eth">
-                            </div>
-                            <div class="coin-wrapper" id="BNB">
-                                <label for="bnb">
-                                    <img class="coin-img" src="./img/bnb.svg" alt="">
-                                    <p class="coin-text">BNB: </p>
-                                </label>
-                                <input type="text" id="bnb">
-                            </div>
-                            <div class="coin-wrapper" id="MATIC">
-                                <label for="matic">
-                                    <img class="coin-img" src="./img/matic.svg" alt="">
-                                    <p class="coin-text">MATIC: </p>
-                                </label>
-                                <input type="text" id="matic">
-                            </div>
-                            <div class="coin-wrapper" id="SOL">
-                                <label for="sol">
-                                    <img class="coin-img" src="./img/sol.svg" alt="">
-                                    <p class="coin-text">SOL: </p>
-                                </label>
-                                <input type="text" id="sol">
-                            </div>
-                            <div class="coin-wrapper" id="LTC">
-                                <label for="ltc">
-                                    <img class="coin-img" src="./img/ltc.svg" alt="">
-                                    <p class="coin-text">LTC: </p>
-                                </label>
-                                <div>
-                                    <input type="text" id="ltc">
-                                    <p>Eh/s</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mining-container col-12 col-lg-4">
-                    <div class="mining-content">
-                        <div class="mining-title">
-                            <p>Your Power</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mining-container col-12 col-lg-4">
-                    <div class="mining-content">
-                        <div class="mining-title">
-                            <p>Block reward</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
+    <div class="background">
+        Hello
     </div>
-    <iframe src="https://rollercoin.com/network-power" height="500px" frameborder="0" onload="getNetPower()"></iframe>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="./test/test.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/js.js"></script>
 </body>
 </html>

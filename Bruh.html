@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Textbox</title>
+</head>
+<body>
+    <textarea id="inputBox" rows="10" cols="50"></textarea>
+    <br>
+    <button onclick="parseInput()">Parse Input</button>
+
+    <script>
+        let parsedData = []; // Global variable to store parsed data
+        
+        function parseInput() {
+            const inputText = document.getElementById('inputBox').value;
+            const lines = inputText.trim().split('\n');
+            parsedData = [];
+            
+            lines.forEach(line => {
+                const segments = line.trim().split(/\s+/);
+                if (segments.length >= 3) {
+                    const coin = segments[0].toUpperCase();
+                    const value = parseFloat(segments[segments.length - 2]);
+                    if (!isNaN(value)) {
+                        parsedData.push({ coin, value });
+                    }
+                }
+            });
+
+            console.log(parsedData);
+            return parsedData; // Return parsed data
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+body {
+    background-color: #e9e7ed;
+    margin: 0;
+}
+
+.background { 
+    background-image: linear-gradient( #25202a, #1a161f);
+    width: 100%;
+}
+
+/* Colapsable menu  */
+

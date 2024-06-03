@@ -209,3 +209,24 @@ function calculateGoalPower() {
 
 // Arc.io Div appender
 
+// TESTING
+
+function parseInput() {
+    const inputText = document.getElementById('inputBox').value;
+    const lines = inputText.trim().split('\n');
+    const data = [];
+    
+    lines.forEach(line => {
+        const segments = line.trim().split(/\s+/);
+        if (segments.length >= 3) {
+            const coin = segments[0].toUpperCase();
+            const value = parseFloat(segments[segments.length - 2]);
+            if (!isNaN(value)) {
+                data.push({ coin, value });
+            }
+        }
+    });
+
+    console.log(data);
+
+}
